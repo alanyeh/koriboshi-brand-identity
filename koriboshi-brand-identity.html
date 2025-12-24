@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koriboshi Brand Identity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Core Neutrals */
+            --cream: #F5F1E8;
+            --off-white: #FDFBF7;
+            --sand: #E8DCC8;
+            --warm-gray: #8B847A;
+            --charcoal: #2A2623;
+            --true-black: #000000;
+            
+            /* Accent Colors - From Product Hats */
+            --forest-green: #6B7560;
+            --bronze-rust: #B8704A;
+            --dusty-rose: #C98B8B;
+            --slate-blue: #6B7A8C;
+            --golden-mustard: #D4A645;
+        }
+
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--charcoal);
+            background: var(--off-white);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 60px;
+            background: var(--off-white);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--forest-green) 0%, var(--bronze-rust) 33%, var(--dusty-rose) 66%, var(--slate-blue) 100%);
+        }
+
+        .brand-mark {
+            margin-bottom: 60px;
+        }
+
+        .brand-mark img {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .hero-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            color: var(--warm-gray);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Section Structure */
+        .section {
+            padding: 120px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 80px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--forest-green);
+        }
+
+        .section-number {
+            font-size: 13px;
+            color: var(--warm-gray);
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--charcoal);
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+
+        .section-intro {
+            font-size: 18px;
+            color: var(--warm-gray);
+            max-width: 900px;
+            line-height: 1.8;
+        }
+
+        /* Brand Essence Block */
+        .essence-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .essence-card {
+            padding: 50px 40px;
+            background: var(--cream);
+            border-left: 4px solid var(--forest-green);
+            transition: all 0.3s ease;
+        }
+
+        .essence-card:hover {
+            transform: translateY(-5px);
+            border-left-color: var(--bronze-rust);
+        }
+
+        .essence-card h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+
+        .essence-card p {
+            font-size: 15px;
+            color: var(--warm-gray);
+            line-height: 1.7;
+        }
+
+        /* Logo Variations */
+        .logo-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .logo-box {
+            padding: 80px;
+            border: 2px solid rgba(42, 38, 35, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .logo-box.dark {
+            background: var(--charcoal);
+        }
+
+        .logo-box.light {
+            background: var(--off-white);
+        }
+
+        .logo-label {
+            margin-top: 40px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--warm-gray);
+        }
+
+        .logo-box.dark .logo-label {
+            color: var(--sand);
+        }
+
+        .logo-text {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 72px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .logo-text.dark {
+            color: var(--off-white);
+        }
+
+        .logo-text.light {
+            color: var(--true-black);
+        }
+
+        /* Color Palette */
+        .color-section {
+            margin-top: 80px;
+        }
+
+        .color-category {
+            margin-bottom: 60px;
+        }
+
+        .color-category h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 30px;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .color-swatch {
+            aspect-ratio: 1;
+            position: relative;
+            border: 2px solid rgba(42, 38, 35, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .color-swatch:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .color-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: rgba(253, 251, 247, 0.95);
+        }
+
+        .color-name {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--charcoal);
+        }
+
+        .color-hex {
+            font-size: 12px;
+            color: var(--warm-gray);
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .color-usage {
+            margin-top: 8px;
+            font-size: 11px;
+            color: var(--warm-gray);
+            line-height: 1.5;
+        }
+
+        /* Typography */
+        .type-specimen {
+            margin-bottom: 60px;
+            padding: 60px;
+            background: var(--cream);
+            border: 2px solid rgba(42, 38, 35, 0.1);
+        }
+
+        .type-primary {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 96px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 40px;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+
+        .type-secondary {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 18px;
+            color: var(--warm-gray);
+            line-height: 1.7;
+            max-width: 800px;
+        }
+
+        .type-details {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(42, 38, 35, 0.1);
+        }
+
+        .type-detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        .type-detail-label {
+            color: var(--warm-gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .type-detail-value {
+            color: var(--charcoal);
+            font-weight: 500;
+        }
+
+        /* Photography Style */
+        .photo-principles {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .photo-example {
+            aspect-ratio: 4/5;
+            background: var(--sand);
+            border: 2px solid rgba(42, 38, 35, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: var(--charcoal);
+            color: var(--off-white);
+            padding: 10px 20px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            border: 2px solid var(--forest-green);
+        }
+
+        .photo-badge.dont {
+            background: var(--bronze-rust);
+            border-color: var(--charcoal);
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: linear-gradient(transparent, rgba(253, 251, 247, 0.98));
+        }
+
+        .photo-caption h4 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 10px;
+        }
+
+        .photo-caption p {
+            font-size: 13px;
+            color: var(--warm-gray);
+            line-height: 1.6;
+        }
+
+        /* Website Mockups */
+        .mockup-section {
+            margin-top: 80px;
+        }
+
+        .mockup {
+            background: var(--off-white);
+            border: 2px solid rgba(42, 38, 35, 0.1);
+            padding: 80px 60px;
+            margin-bottom: 50px;
+        }
+
+        .mockup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(42, 38, 35, 0.1);
+        }
+
+        .mockup-logo {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--true-black);
+        }
+
+        .mockup-nav {
+            display: flex;
+            gap: 40px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .mockup-nav a {
+            color: var(--charcoal);
+            text-decoration: none;
+        }
+
+        .mockup-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .mockup-content h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1.1;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .mockup-content p {
+            font-size: 16px;
+            color: var(--warm-gray);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .mockup-cta {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--charcoal);
+            color: var(--off-white);
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid var(--charcoal);
+            transition: all 0.3s ease;
+        }
+
+        .mockup-cta:hover {
+            background: transparent;
+            color: var(--charcoal);
+        }
+
+        .mockup-image {
+            aspect-ratio: 4/5;
+            background: var(--sand);
+            border: 2px solid rgba(42, 38, 35, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: var(--warm-gray);
+        }
+
+        /* Product Card Example */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .product-card {
+            border: 2px solid rgba(42, 38, 35, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            border-color: var(--forest-green);
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            aspect-ratio: 1;
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: var(--warm-gray);
+        }
+
+        .product-info {
+            padding: 30px;
+            background: var(--off-white);
+        }
+
+        .product-name {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: var(--warm-gray);
+            font-weight: 500;
+        }
+
+        /* Voice & Tone */
+        .tone-examples {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .tone-box {
+            padding: 50px;
+            background: var(--cream);
+            border-left: 4px solid var(--forest-green);
+        }
+
+        .tone-box.dont {
+            border-left-color: var(--bronze-rust);
+        }
+
+        .tone-box h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+
+        .tone-example {
+            font-size: 15px;
+            color: var(--warm-gray);
+            line-height: 1.7;
+            font-style: italic;
+            padding: 20px;
+            background: var(--off-white);
+            margin-bottom: 15px;
+        }
+
+        .tone-note {
+            font-size: 13px;
+            color: var(--warm-gray);
+            line-height: 1.6;
+        }
+
+        /* Quick Reference */
+        .quick-ref {
+            background: var(--charcoal);
+            color: var(--off-white);
+            padding: 80px 60px;
+            margin-top: 100px;
+        }
+
+        .quick-ref h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--off-white);
+            margin-bottom: 50px;
+        }
+
+        .ref-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        .ref-item h4 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--forest-green);
+            margin-bottom: 15px;
+        }
+
+        .ref-item ul {
+            list-style: none;
+            font-size: 14px;
+            color: var(--sand);
+            line-height: 2;
+        }
+
+        .ref-item ul li::before {
+            content: '→ ';
+            color: var(--forest-green);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px;
+            text-align: center;
+            background: var(--off-white);
+            border-top: 2px solid rgba(42, 38, 35, 0.1);
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: var(--warm-gray);
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section {
+                padding: 80px 30px;
+            }
+
+            .section-title {
+                font-size: 42px;
+            }
+
+            .essence-grid,
+            .logo-showcase,
+            .photo-principles,
+            .tone-examples,
+            .product-grid,
+            .ref-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mockup-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .mockup-content h1 {
+                font-size: 48px;
+            }
+
+            .type-primary {
+                font-size: 56px;
+            }
+
+            .logo-text {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="brand-mark">
+            <div class="logo-text light">
+                KORIBOSHI<br>SAUNA
+            </div>
+        </div>
+        <div class="hero-title">Brand Identity</div>
+        <div class="hero-subtitle">Kori = Ice · Boshi = Hat</div>
+    </div>
+
+    <!-- Brand Essence -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">01</div>
+            <div class="section-title">Who We Are</div>
+            <div class="section-intro">
+                Koriboshi brings Japanese craft to active sauna culture. Born from climbing gyms and 
+                inspired by Japanese cotton hats, we create functional gear for people who build daily 
+                rituals around movement and recovery.
+            </div>
+        </div>
+
+        <div class="essence-grid">
+            <div class="essence-card">
+                <h3>Active Ritual</h3>
+                <p>
+                    Sauna as daily practice, not luxury spa. Post-climb, post-run, post-training. 
+                    We're for athletes, movers, and ritual-builders who sauna to recover and reset.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Japanese Function</h3>
+                <p>
+                    Inspired by Japanese design philosophy: simple, durable, thoughtful. Soft cotton 
+                    that breathes. Construction that lasts. Function over decoration.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Honest Quality</h3>
+                <p>
+                    No marketing fluff. No wellness clichés. Just well-made cotton hats that do their 
+                    job: protect your head, enhance your session, last through daily use.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo System -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">02</div>
+            <div class="section-title">Logo & Identity</div>
+            <div class="section-intro">
+                Our wordmark uses a refined serif typeface that feels timeless and premium without 
+                being precious. The two-line lockup (KORIBOSHI / SAUNA) provides flexibility across 
+                different applications.
+            </div>
+        </div>
+
+        <div class="logo-showcase">
+            <div class="logo-box light">
+                <div class="logo-text light">
+                    KORIBOSHI<br>SAUNA
+                </div>
+                <div class="logo-label">Primary Logo — Light Backgrounds</div>
+            </div>
+
+            <div class="logo-box dark">
+                <div class="logo-text dark">
+                    KORIBOSHI<br>SAUNA
+                </div>
+                <div class="logo-label">Primary Logo — Dark Backgrounds</div>
+            </div>
+        </div>
+
+        <div class="essence-grid" style="margin-top: 60px;">
+            <div class="essence-card">
+                <h3>Clear Space</h3>
+                <p>
+                    Maintain minimum clear space equal to the height of one letter around the logo. 
+                    Never crowd it with other elements.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Minimum Size</h3>
+                <p>
+                    Logo should never appear smaller than 120px wide in digital applications, 
+                    or 1.5 inches in print.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Usage</h3>
+                <p>
+                    Use black on light backgrounds, white on dark backgrounds. Never distort, 
+                    rotate, or apply effects to the logo.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Color Palette -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">03</div>
+            <div class="section-title">Color System</div>
+            <div class="section-intro">
+                Our palette is grounded in warm neutrals with accent colors pulled directly from 
+                our product line. Each accent color represents an actual hat color—creating natural 
+                harmony between brand and product. Forest green, bronze rust, dusty rose, slate blue, 
+                and golden mustard provide energy while staying true to our earthy, natural aesthetic.
+            </div>
+        </div>
+
+        <div class="color-section">
+            <div class="color-category">
+                <h3>Primary Neutrals</h3>
+                <div class="color-grid">
+                    <div class="color-swatch" style="background: #FDFBF7;">
+                        <div class="color-info">
+                            <div class="color-name">Off-White</div>
+                            <div class="color-hex">#FDFBF7</div>
+                            <div class="color-usage">Main background, spacer</div>
+                        </div>
+                    </div>
+
+                    <div class="color-swatch" style="background: #F5F1E8;">
+                        <div class="color-info">
+                            <div class="color-name">Cream</div>
+                            <div class="color-hex">#F5F1E8</div>
+                            <div class="color-usage">Cards, alternate background</div>
+                        </div>
+                    </div>
+
+                    <div class="color-swatch" style="background: #E8DCC8;">
+                        <div class="color-info">
+                            <div class="color-name">Sand</div>
+                            <div class="color-hex">#E8DCC8</div>
+                            <div class="color-usage">Image backgrounds, subtle fills</div>
+                        </div>
+                    </div>
+
+                    <div class="color-swatch" style="background: #8B847A;">
+                        <div class="color-info" style="background: rgba(253, 251, 247, 0.95);">
+                            <div class="color-name">Warm Gray</div>
+                            <div class="color-hex">#8B847A</div>
+                            <div class="color-usage">Secondary text, captions</div>
+                        </div>
+                    </div>
+
+                    <div class="color-swatch" style="background: #2A2623;">
+                        <div class="color-info" style="background: rgba(253, 251, 247, 0.95);">
+                            <div class="color-name">Charcoal</div>
+                            <div class="color-hex">#2A2623</div>
+                            <div class="color-usage">Primary text, dark sections</div>
+                        </div>
+                    </div>
+
+                    <div class="color-swatch" style="background: #000000;">
+                        <div class="color-info" style="background: rgba(253, 251, 247, 0.95);">
+                            <div class="color-name">True Black</div>
+                            <div class="color-hex">#000000</div>
+                            <div class="color-usage">Logo, strong contrast</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="color-category">
+                <h3>Accent Colors — From Our Products</h3>
+                <div class="color-grid">
+                    <div class="color-swatch" style="background: #6B7560;">
+                        <div class="color-info" style="background: rgba(253, 251, 247, 0.95);">
+                            <div class="color-name">Forest Green</div>
+                            <div class="color-hex">#6B7560</div>
+                            <div class="color-usage">Primary accent, borders, CTAs</div>
+                        </div>
+                    </div>
+
+                    <div class="color-swatch" style="background: #B8704A;">
+                        <div class="color-info" style="background: rgba(253, 251, 247, 0.95);">
+                            <div class="color-name">Bronze Rust</div>
+                            <div class="color-hex">#B8704A</div>
+                            <div class="color-usage">Warm accent, highlights</div>
+                        </div>
+                    </div>
+
+                    <div class="color-swatch" style="background: #C98B8B;">
+                        <div class="color-info" style="background: rgba(253, 251, 247, 0.95);">
+                            <div class="color-name">Dusty Rose</div>
+                            <div class="color-hex">#C98B8B</div>
+                            <div class="color-usage">Soft accent, product feature</div>
+                        </div>
+                    </div>
+
+                    <div class="color-swatch" style="background: #6B7A8C;">
+                        <div class="color-info" style="background: rgba(253, 251, 247, 0.95);">
+                            <div class="color-name">Slate Blue</div>
+                            <div class="color-hex">#6B7A8C</div>
+                            <div class="color-usage">Cool accent, secondary</div>
+                        </div>
+                    </div>
+
+                    <div class="color-swatch" style="background: #D4A645;">
+                        <div class="color-info" style="background: rgba(253, 251, 247, 0.95);">
+                            <div class="color-name">Golden Mustard</div>
+                            <div class="color-hex">#D4A645</div>
+                            <div class="color-usage">Energy, seasonal accent</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="essence-grid" style="margin-top: 60px;">
+                <div class="essence-card">
+                    <h3>85/15 Rule</h3>
+                    <p>
+                        Neutrals should comprise 85% of any composition. Accent colors are used 
+                        deliberately for borders, highlights, and calls-to-action.
+                    </p>
+                </div>
+
+                <div class="essence-card">
+                    <h3>Forest Green</h3>
+                    <p>
+                        Our primary accent color, pulled directly from our Forest Green hat. Use for 
+                        borders, section dividers, hover states, and primary CTAs. Grounding and natural.
+                    </p>
+                </div>
+
+                <div class="essence-card">
+                    <h3>Product Harmony</h3>
+                    <p>
+                        All accent colors come from our actual product line. This creates visual 
+                        harmony between the brand and the hats themselves. Use bronze rust for warmth, 
+                        dusty rose for softer moments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Typography -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">04</div>
+            <div class="section-title">Typography</div>
+            <div class="section-intro">
+                Two typefaces create our typographic system: Libre Baskerville for display and headings, 
+                IBM Plex Mono for body text and UI. This pairing balances classical elegance with 
+                technical precision.
+            </div>
+        </div>
+
+        <div class="type-specimen">
+            <div class="type-primary">
+                Protect<br>Your Head
+            </div>
+            <div class="type-secondary">
+                This is Libre Baskerville, our display typeface. Use it for headlines, product names, 
+                and any text that needs presence and elegance. Weight 700 (Bold) for headlines, 
+                400 (Regular) for subheadings with more breathing room.
+            </div>
+            <div class="type-details">
+                <div class="type-detail-item">
+                    <span class="type-detail-label">Typeface</span>
+                    <span class="type-detail-value">Libre Baskerville</span>
+                </div>
+                <div class="type-detail-item">
+                    <span class="type-detail-label">Usage</span>
+                    <span class="type-detail-value">Headlines, Display, Product Names</span>
+                </div>
+                <div class="type-detail-item">
+                    <span class="type-detail-label">Weights</span>
+                    <span class="type-detail-value">Bold 700, Regular 400</span>
+                </div>
+                <div class="type-detail-item">
+                    <span class="type-detail-label">Size Range</span>
+                    <span class="type-detail-value">20px – 120px</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="type-specimen">
+            <div class="type-secondary">
+                This is IBM Plex Mono, our body typeface. A monospace font that brings technical 
+                precision and readability. Use it for all body copy, captions, navigation, and UI 
+                elements. The monospace rhythm creates calm and order.
+            </div>
+            <div class="type-details">
+                <div class="type-detail-item">
+                    <span class="type-detail-label">Typeface</span>
+                    <span class="type-detail-value">IBM Plex Mono</span>
+                </div>
+                <div class="type-detail-item">
+                    <span class="type-detail-label">Usage</span>
+                    <span class="type-detail-value">Body Text, Captions, Navigation, UI</span>
+                </div>
+                <div class="type-detail-item">
+                    <span class="type-detail-label">Weights</span>
+                    <span class="type-detail-value">Medium 500, Regular 400</span>
+                </div>
+                <div class="type-detail-item">
+                    <span class="type-detail-label">Size Range</span>
+                    <span class="type-detail-value">13px – 20px</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="essence-grid" style="margin-top: 60px;">
+            <div class="essence-card">
+                <h3>Hierarchy</h3>
+                <p>
+                    Create hierarchy through size and weight, not color. Headlines 48-96px, 
+                    subheads 24-32px, body 15-18px, captions 12-14px.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Line Height</h3>
+                <p>
+                    Display: 1.1-1.2 (tight and impactful). Body: 1.6-1.8 (readable and breathable). 
+                    More space makes text easier to read.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Letter Spacing</h3>
+                <p>
+                    Large display: -1px to -2px (tighten). Small caps/labels: +1px to +3px (open up). 
+                    Body text: default tracking.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photography -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">05</div>
+            <div class="section-title">Photography</div>
+            <div class="section-intro">
+                Real moments, natural light, authentic context. Show sauna as part of active life—
+                post-workout, in gym settings, daily ritual. Never overly styled or spa-like.
+            </div>
+        </div>
+
+        <div class="photo-principles">
+            <div class="photo-example" style="background: url('product-photo-example.png') center/cover no-repeat;">
+                <div class="photo-badge">DO THIS</div>
+                <div class="photo-caption">
+                    <h4>Perfect Product Photography</h4>
+                    <p>
+                        Clean neutral background, soft even lighting, subtle shadow for depth. 
+                        Product centered and clearly visible. Shows texture and craftsmanship. 
+                        This is exactly the style to follow.
+                    </p>
+                </div>
+            </div>
+
+            <div class="photo-example">
+                <div class="photo-badge dont">AVOID THIS</div>
+                <div class="photo-caption">
+                    <h4>Generic Luxury</h4>
+                    <p>
+                        Overly styled spa settings, posed perfection, ultra-clean commercial staging, 
+                        generic wellness stock photography. Busy backgrounds or harsh lighting.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="essence-grid" style="margin-top: 60px;">
+            <div class="essence-card">
+                <h3>Product Shots</h3>
+                <p>
+                    Clean neutral backgrounds (light gray, off-white, cream). Soft, even lighting 
+                    with subtle shadows. Product centered, clearly visible. Show texture and 
+                    craftsmanship. See example above—this is the standard.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Lifestyle</h3>
+                <p>
+                    Climbing gym saunas, athletic settings, real people in authentic moments. 
+                    Show the context—training gear nearby, water bottles, post-workout environment. 
+                    Natural light, honest composition.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Lighting & Shadows</h3>
+                <p>
+                    Soft, diffused natural light. Subtle shadows add depth without drama. 
+                    No harsh directional light or high contrast. The shadow should ground 
+                    the product, not distract from it.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Website Application -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">06</div>
+            <div class="section-title">Website Design</div>
+            <div class="section-intro">
+                Your website should feel clean, confident, and functional. Strong typography, 
+                generous spacing, clear hierarchy. Here's how to apply the brand identity.
+            </div>
+        </div>
+
+        <div class="mockup-section">
+            <div class="mockup">
+                <div class="mockup-header">
+                    <div class="mockup-logo">KORIBOSHI SAUNA</div>
+                    <div class="mockup-nav">
+                        <a href="#">Shop</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+
+                <div class="mockup-hero">
+                    <div class="mockup-content">
+                        <h1>Built for Your Sauna Ritual</h1>
+                        <p>
+                            Japanese-style cotton sauna hats designed for daily use. 
+                            Soft, breathable, easy to wash. Born from climbing gyms, 
+                            made for everyone who saunas.
+                        </p>
+                        <a href="#" class="mockup-cta">Shop Sauna Hats</a>
+                    </div>
+                    <div class="mockup-image">
+                        [Hero Product Image]
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">[Product Photo]</div>
+                    <div class="product-info">
+                        <div class="product-name">Espresso</div>
+                        <div class="product-price">$39.90</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">[Product Photo]</div>
+                    <div class="product-info">
+                        <div class="product-name">Charcoal</div>
+                        <div class="product-price">$39.90</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">[Product Photo]</div>
+                    <div class="product-info">
+                        <div class="product-name">Navy</div>
+                        <div class="product-price">$39.90</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="essence-grid" style="margin-top: 60px;">
+            <div class="essence-card">
+                <h3>Navigation</h3>
+                <p>
+                    Simple, clean, uppercase. Black logo, minimal links. 1px border underneath. 
+                    Sticky on scroll optional.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Hero Section</h3>
+                <p>
+                    Large headline (48-72px), clear product image, single CTA. Generous white space. 
+                    No background imagery.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Product Cards</h3>
+                <p>
+                    Square product photos, neutral backgrounds, 2px borders. Product name in Libre Baskerville, 
+                    price in Plex Mono. Hover effect: translate up, border color change.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Voice & Tone -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-number">07</div>
+            <div class="section-title">Voice & Messaging</div>
+            <div class="section-intro">
+                Direct, confident, unpretentious. We explain clearly without marketing hype. 
+                Active voice, concrete details, no wellness clichés.
+            </div>
+        </div>
+
+        <div class="tone-examples">
+            <div class="tone-box">
+                <h3>✓ Do This</h3>
+                <div class="tone-example">
+                    "Protects your head from extreme heat so you can sauna longer and more comfortably."
+                </div>
+                <div class="tone-note">
+                    Direct benefit. Active voice. Clear and specific.
+                </div>
+            </div>
+
+            <div class="tone-box dont">
+                <h3>✗ Not This</h3>
+                <div class="tone-example">
+                    "Experience enhanced thermal comfort with our revolutionary heat-protective headwear solution."
+                </div>
+                <div class="tone-note">
+                    Too corporate. Vague marketing speak. Sounds like everyone else.
+                </div>
+            </div>
+
+            <div class="tone-box">
+                <h3>✓ Do This</h3>
+                <div class="tone-example">
+                    "Double-layered cotton. Soft, breathable, machine washable. Built for daily use."
+                </div>
+                <div class="tone-note">
+                    Specific materials. Short sentences. Concrete benefits.
+                </div>
+            </div>
+
+            <div class="tone-box dont">
+                <h3>✗ Not This</h3>
+                <div class="tone-example">
+                    "Crafted from premium sustainable fibers to elevate your wellness journey."
+                </div>
+                <div class="tone-note">
+                    Wellness cliché. Vague claims. Sounds pretentious.
+                </div>
+            </div>
+        </div>
+
+        <div class="essence-grid" style="margin-top: 60px;">
+            <div class="essence-card">
+                <h3>Be Direct</h3>
+                <p>
+                    "Protects your head" not "Provides protection for." "Built for daily use" not 
+                    "Designed to be used daily." Active voice, clear subject.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Be Specific</h3>
+                <p>
+                    "Double-layered cotton" not "Premium materials." "Machine washable" not 
+                    "Easy care." Concrete details build trust.
+                </p>
+            </div>
+
+            <div class="essence-card">
+                <h3>Be Real</h3>
+                <p>
+                    "Born from climbing gyms" not "Inspired by wellness culture." Show origin, 
+                    admit problems we solved, speak to real use.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Reference -->
+    <div class="quick-ref">
+        <h2>Quick Reference</h2>
+        <div class="ref-grid">
+            <div class="ref-item">
+                <h4>Color Splits</h4>
+                <ul>
+                    <li>85% neutrals</li>
+                    <li>15% accents</li>
+                    <li>Forest green primary</li>
+                    <li>Bold borders (2-4px)</li>
+                </ul>
+            </div>
+
+            <div class="ref-item">
+                <h4>Typography</h4>
+                <ul>
+                    <li>Libre Baskerville for display</li>
+                    <li>IBM Plex Mono for body</li>
+                    <li>Headlines: 48-96px</li>
+                    <li>Body: 15-18px</li>
+                </ul>
+            </div>
+
+            <div class="ref-item">
+                <h4>Photography</h4>
+                <ul>
+                    <li>Natural light</li>
+                    <li>Neutral backgrounds</li>
+                    <li>Real context (gym)</li>
+                    <li>Show product in use</li>
+                </ul>
+            </div>
+
+            <div class="ref-item">
+                <h4>Logo Usage</h4>
+                <ul>
+                    <li>Black on light</li>
+                    <li>White on dark</li>
+                    <li>Minimum 120px wide</li>
+                    <li>Never distort</li>
+                </ul>
+            </div>
+
+            <div class="ref-item">
+                <h4>Voice</h4>
+                <ul>
+                    <li>Direct and clear</li>
+                    <li>Specific details</li>
+                    <li>Active voice</li>
+                    <li>No wellness fluff</li>
+                </ul>
+            </div>
+
+            <div class="ref-item">
+                <h4>Layout</h4>
+                <ul>
+                    <li>Generous spacing</li>
+                    <li>Clear grid systems</li>
+                    <li>Strong borders</li>
+                    <li>Dramatic scale</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-text">
+            Koriboshi Brand Identity — Version 1.0<br>
+            氷 帽子 — Kori · Boshi — Ice · Hat
+        </div>
+    </div>
+
+</body>
+</html>
